@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Web Aléatoire</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        button { padding: 10px 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1 id="headline">Bienvenue sur Votre Site Web Aléatoire</h1>
+    <p id="random-text">Ceci est une phrase aléatoire de notre collection.</p>
+    <button onclick="generateRandomContent()">Générer Nouveau Contenu</button>
+    <script>
+        const sentences = [
+            "shaina est pas belle aujourdhui .",
+            "shaina est magnifique aujourdhui .",
+            "Être ou ne pas être, tel est la question.",
+            "Un voyage de mille miles commence par un seul cornichon.",
+            "Mieux vaut tard que jamais.",
+            "Aucun homme n'est shaina."
+        ];
+
+        function generateRandomContent() {
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            document.getElementById("random-text").innerText = sentences[randomIndex];
+        }
+
+        // Initialiser avec un contenu aléatoire
+        window.onload = generateRandomContent;
+    </script>
+</body>
+</html>
